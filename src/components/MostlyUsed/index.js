@@ -1,7 +1,7 @@
 import React from "react";
 import Demo from "./Demo";
 
-export default class MostlUsed extends React.Component {
+export default class MostlyUsed extends React.Component {
   constructor(props) {
     super(props);
 

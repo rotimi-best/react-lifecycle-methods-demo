@@ -51,7 +51,7 @@ export default class Demo extends Component {
         <h1>Topic: {this.state.lesson}</h1>
         <p>You are {this.state.loggedIn ? "" : "not"} logged in</p>
         <button onClick={this.handleClick}>
-          {this.state.loggedIn ? "Logout" : "Login"}
+          {this.state.loggedIn ? "Logout 🔒" : "Login 🔓"}
         </button>
       </div>
     );

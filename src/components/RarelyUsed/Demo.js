@@ -15,7 +15,7 @@ export default class Demo extends Component {
 
   /* ======================== MOUNTING = МОНТЕРОВАНИЕ======================= */
   static getDerivedStateFromProps(props, state) {
-    console.log("2. Get derived state from props - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
+    console.log("2/5. Get derived state from props - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
     console.log("==============================");
 
     // return {
@@ -34,14 +34,14 @@ export default class Demo extends Component {
 
   /* ======================== UPDATING = ОБНОВЛЕНИЕ======================= */
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("5. Should component update - ОБНОВЛЕНИЕ");
+    console.log("6. Should component update - ОБНОВЛЕНИЕ");
     console.log("==============================");
 
     return true;
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("5. Should component update - ОБНОВЛЕНИЕ");
+    console.log("8. Get snap shot before update - ОБНОВЛЕНИЕ");
     console.log("==============================");
 
     const snapshot = "Some snapshot data";
@@ -50,35 +50,37 @@ export default class Demo extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("Component did update - ОБНОВЛЕНИЕ");
+    console.log("9. Component did update - ОБНОВЛЕНИЕ");
     console.log("snapshot: ", snapshot);
     console.log("==============================");
   }
 
   /* ======================== UNMOUNTING = РАЗМОНТЕРОВАНИЕ======================= */
   componentWillUnmount() {
-    console.log("Component will unmount - РАЗМОНТЕРОВАНИЕ");
+    console.log("8. Component will unmount - РАЗМОНТЕРОВАНИЕ");
     console.log("==============================");
   }
 
   handleClick = () => {
     // Send API request with axios or fetch to authenticate user
     // then update the state
+    console.log("Updating state..........");
+    console.log("==============================");
     this.setState({
       loggedIn: !this.state.loggedIn
     });
   };
 
   render() {
-    console.log("3. Render - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
+    console.log("3/7. Render - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
     console.log("==============================");
 
     return (
       <div>
         <h1>Topic: {this.state.lesson}</h1>
-        <p>You are {this.state.loggedIn ? "" : "not"} logged in</p>
+        <p>You are {this.state.loggedIn ? " in 🔓" : "out 🔒 "}</p>
         <button onClick={this.handleClick}>
-          {this.state.loggedIn ? "Logout" : "Login"}
+          {this.state.loggedIn ? "🔒 Logout" : "🔓 Login"}
         </button>
       </div>
     );
