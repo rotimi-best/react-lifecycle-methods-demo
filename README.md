@@ -56,7 +56,7 @@ Before the time is updated in the browser you should check it, if the amound of 
 
 ![Task Two Demo](https://github.com/rotimi-best/react-lifecycle-methods-demo/blob/master/src/assets/task_2.gif)
 
-### NOTE
+#### NOTE
 
 > You must use component lifecycles to implement this task
 
@@ -116,6 +116,6 @@ The time now is {state.time}
 
 ![Task Two Demo](https://github.com/rotimi-best/react-lifecycle-methods-demo/blob/master/src/assets/task_2.gif)
 
-### Внимание
+#### Внимание
 
 > Для реализации этой задачи необходимо использовать жизненные циклы компонентов
