@@ -41,3 +41,7 @@ li {
 li:hover {
   cursor: pointer;
 }
+
+.life-cycle-method-image {
+  height: 500px;
+}

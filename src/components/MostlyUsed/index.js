@@ -1,5 +1,6 @@
 import React from "react";
 import Demo from "./Demo";
+import lifeCycleMethodImage from "../../assets/lcm1.png";
 
 export default class MostlyUsed extends React.Component {
   constructor(props) {
@@ -27,6 +28,10 @@ export default class MostlyUsed extends React.Component {
           <button onClick={this.handleClick}>
             Remove Demo Component From Page
           </button>
+
+          <div style={{ borderTop: '1px solid black', margin: `20px auto`}}>
+            <img src={lifeCycleMethodImage}></img>
+          </div>
         </div>
       );
     }
