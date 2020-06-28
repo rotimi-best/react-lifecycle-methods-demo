@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,4 +20,24 @@
 button {
   margin: 10px 0;
   padding: 15px;
+}
+
+nav {
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+  color: blue;
+  text-decoration: underline;
+}
+
+li:hover {
+  cursor: pointer;
 }

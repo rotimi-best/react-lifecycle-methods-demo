@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import log from '../../helpers/log';
 
 export default class Demo extends Component {
   constructor(props) {
@@ -9,14 +10,12 @@ export default class Demo extends Component {
       loggedIn: false
     };
 
-    console.log("1. Constructor - МОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('constructor');
   }
 
   /* ======================== MOUNTING = МОНТЕРОВАНИЕ======================= */
   static getDerivedStateFromProps(props, state) {
-    console.log("2/5. Get derived state from props - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
-    console.log("==============================");
+    log('getDerivedStateFromProps');
 
     // return {
     //     lesson: ":)",
@@ -28,21 +27,18 @@ export default class Demo extends Component {
   }
 
   componentDidMount() {
-    console.log("4. Component did mount - МОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('componentDidMount-r');
   }
 
   /* ======================== UPDATING = ОБНОВЛЕНИЕ======================= */
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("6. Should component update - ОБНОВЛЕНИЕ");
-    console.log("==============================");
+    log('shouldComponentUpdate');
 
     return true;
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("8. Get snap shot before update - ОБНОВЛЕНИЕ");
-    console.log("==============================");
+    log('getSnapshotBeforeUpdate');
 
     const snapshot = "Some snapshot data";
 
@@ -50,30 +46,25 @@ export default class Demo extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("9. Component did update - ОБНОВЛЕНИЕ");
-    console.log("snapshot: ", snapshot);
-    console.log("==============================");
+    log('componentDidUpdate-r');
   }
 
   /* ======================== UNMOUNTING = РАЗМОНТЕРОВАНИЕ======================= */
   componentWillUnmount() {
-    console.log("8. Component will unmount - РАЗМОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('componentWillUnmount-r');
   }
 
   handleClick = () => {
     // Send API request with axios or fetch to authenticate user
     // then update the state
-    console.log("Updating state..........");
-    console.log("==============================");
+    log('handleClick');
     this.setState({
       loggedIn: !this.state.loggedIn
     });
   };
 
   render() {
-    console.log("3/7. Render - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
-    console.log("==============================");
+    log('render');
 
     return (
       <div>

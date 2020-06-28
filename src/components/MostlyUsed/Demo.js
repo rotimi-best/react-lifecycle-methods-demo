@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import log from '../../helpers/log';
 
 export default class Demo extends Component {
   constructor(props) {
@@ -9,42 +10,36 @@ export default class Demo extends Component {
       loggedIn: false
     };
 
-    console.log("1. Constructor - МОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('constructor');
   }
 
   /* ======================== MOUNTING = МОНТЕРОВАНИЕ======================= */
   componentDidMount() {
-    console.log("3. Component did mount - МОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('componentDidMount');
   }
 
   /* ======================== UPDATING = ОБНОВЛЕНИЕ======================= */
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("4. Component did update - ОБНОВЛЕНИЕ");
-    console.log("==============================");
+    log('componentDidUpdate');
   }
 
   /* ======================== UNMOUNTING = РАЗМОНТЕРОВАНИЕ======================= */
   componentWillUnmount() {
-    console.log("5. Component will unmount - РАЗМОНТЕРОВАНИЕ");
-    console.log("==============================");
+    log('componentWillUnmount');
   }
 
   handleClick = () => {
     // Send API request with axios or fetch to authenticate user
     // then update the state
-    console.log("Updating state..........");
-    console.log("==============================");
+    log('handleClick');
     this.setState({
       loggedIn: !this.state.loggedIn
     });
   };
 
   render() {
-    console.log("2. Render - МОНТЕРОВАНИЕ/ОБНОВЛЕНИЕ");
+    log('render');
     // console.log("Current state", this.state);
-    console.log("==============================");
 
     return (
       <div>
