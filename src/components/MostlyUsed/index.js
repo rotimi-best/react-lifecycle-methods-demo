@@ -30,7 +30,7 @@ export default class MostlyUsed extends React.Component {
           </button>
 
           <div style={{ borderTop: '1px solid black', margin: `20px auto`}}>
-            <img src={lifeCycleMethodImage}></img>
+            <img alt="lifeCycleMethodImage" src={lifeCycleMethodImage}></img>
           </div>
         </div>
       );
