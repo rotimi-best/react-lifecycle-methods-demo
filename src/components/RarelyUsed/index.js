@@ -29,7 +29,7 @@ export default class RarelyUsed extends React.Component {
             Remove Demo Component From Page
           </button>
           <div style={{ borderTop: '1px solid black', marginTop: 20}}>
-            <img className="life-cycle-method-image" src={lifeCycleMethodImage}></img>
+            <img alt="lifeCycleMethodImage" className="life-cycle-method-image" src={lifeCycleMethodImage}></img>
           </div>
         </div>
       );
